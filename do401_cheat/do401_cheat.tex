@@ -1,0 +1,53 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\input{/home/boris/science/tex_general/title_bor_utf8}
+
+
+\begin{document}
+\parindent=0 pt % отступ равен 0
+
+Шпаргалка.
+
+\begin{enumerate}
+\item Уравнение Эйлера-Пуассона
+\[
+F_y-\frac{d}{dt}F_{y'}+\frac{d^2}{dt^2}F_{y''}+\ldots+(-1)^n\frac{d^n}{dt^n}F_{y^{(n)}}=0
+\]
+
+\item Для автономной системы $v[y]=\int_a^b F(y,y')\, dt \to extr$ уравнение Эйлера приводится к виду $y'F_{y'}-F=const$
+
+\item Условие трансверсальности 
+\[
+[F-y'F_{y'}]_{t=T}\cdot \Delta T + [F_{y'}]_{t=T}\cdot \Delta y_T=0
+\]
+
+\item Условие трансверсальности для задачи Больца
+\[
+\begin{cases}
+\left. F_{y'}\right|_{t_0}=G_{y(t_0)} \\
+\left. F_{y'}\right|_{t_1}=-G_{y(t_1)}
+\end{cases}
+\]
+
+\item Решение линейных дифференциальных уравнений
+
+\begin{enumerate}
+\item Общее решение однородного уравнения $y^{(n)}+\ldots+a_1 y'+a_0 y=0$
+\begin{enumerate}
+\item Вещественный корень $\lambda$ кратности $k$: $e^{\lambda t}$, $te^{\lambda t}$, $t^2e^{\lambda t}$, \ldots, $t^{k-1}e^{\lambda t}$
+\item Пара комплексных корней $\lambda=a\pm bi$  кратности $k$:
+
+$e^{at}\cos(bt)$, $te^{at}\cos(bt)$, $t^2e^{at}\cos(bt)$, \ldots, $t^{k-1}e^{at}\cos(bt)$ \\
+$e^{at}\sin(bt)$, $te^{at}\sin(bt)$, $t^2e^{at}\sin(bt)$, \ldots, $t^{k-1}e^{at}\sin(bt)$
+\end{enumerate}
+\item Частное решение неоднородного уравнения $y^{(n)}+\ldots+a_1 y'+a_0 y=f(t)$
+\begin{enumerate}
+\item Если $f(t)=e^{at}P_n(t)$, то найдётся решение $y_0(t)=t^k e^{at} R_n(t)$, где $k$ --- кратность корня $a$
+\item Если $f(t)=e^{at}(P_n(t)\cos(bt)+Q_n(t)\sin(bt))$, то найдётся решение $y_0(t)=t^k e^{at}(R_n(t)\cos(bt)+S_n(t)\sin(bt))$, где $k$ --- кратность корня $a+bi$
+\end{enumerate}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
